@@ -10,3 +10,4 @@ urlpatterns = [
     # path('about/', views.about),
     path('', include('myapp.urls')),
 ]
+

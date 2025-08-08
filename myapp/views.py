@@ -28,3 +28,30 @@ def htmlfile(request):
 def datafile(request):
     a = "Django is a framework"
     return render(request, 'index.html', {'data': a})
+
+
+def home(request):
+    return HttpResponse("This is home page")
+
+
+def help(request):
+    return HttpResponse("This is help page")
+
+
+def name(request,name):
+    return HttpResponse(f"My name is : {name}")
+
+def number(request, number):
+    return HttpResponse(f"The number is: {number}")
+
+
+def string(request, string):
+    return HttpResponse(f"The string is: {string}")
+
+
+def even_odd(request, num):
+    if num % 2 == 0:
+        return HttpResponse(f"{num} is even")
+    else:
+        return HttpResponse(f"{num} is odd")
+
